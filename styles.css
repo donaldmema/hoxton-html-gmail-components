@@ -8,11 +8,13 @@
       height: 100vh;
       display: grid;
       grid-template: 
-      'header header header header' auto
-      'left-panel main settings widgets' 1fr/
-      20% 1fr 20% 50px;
+      'header header header' auto
+      'left-panel main right-panel' 1fr/
+      1.5fr 4fr 2fr;
   }
-
+  /* TODO: add media query to not allow expanding of side panels or make them fixed */
+  
+  
   /* Header Section */
 
   .header {
@@ -61,15 +63,16 @@
   /* Right Panel Section */
 
   .right-panel {
-    grid-area: settings;
+    grid-area: right-panel;
     background-color: lightgoldenrodyellow;
-    padding: 0.5rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr auto;
   }
 
   /* Right-side Widgets Section */
 
   .widgets {
-    grid-area: widgets;
     background-color: rgb(241, 224, 202);
     padding: 0.5rem;
   }
