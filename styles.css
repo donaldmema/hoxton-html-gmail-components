@@ -4,95 +4,97 @@
     box-sizing: border-box;
   }
 
-  .container {
-      height: 100vh;
-      display: grid;
-      grid-template: 
-      'header header header' auto
-      'left-panel main right-panel' 1fr/
-      1.5fr 4fr 2fr;
-  }
-  /* TODO: add media query to not allow expanding of side panels or make them fixed */
-  
-  
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template: 
+    'header header header' auto
+    'left-panel main right-panel' 1fr/
+    1.5fr 4fr 2fr;
+}
+/* TODO: add media query to not allow expanding of side panels or make them fixed */
+
+
   /* Header Section */
 
-  .header {
-      display: inline;
-      align-content: center;
-      grid-area: header;
-      background-color: white;
-      padding: 1rem;
-  }
+.header {
+    display: inline;
+    align-content: center;
+    grid-area: header;
+    background-color: white;
+    padding: 1rem;
+}
   
-  /* Left Panel Section */
+.menu-icon {
+    border: none;
+    margin: 5px;
+    margin-right: 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+}
 
-  .left-panel {
-      grid-area: left-panel;
-      display: grid;
-      /* gap: 0.5rem; */
-  }
-  .inbox-section {
-    background-color: rgb(238, 135, 135);
-    padding: 0.5rem;
-  }
-
-  .meetings-section {
-    background-color: rgb(160, 179, 238);
-    padding: 0.5rem;
-  }
-
-  /* Main Section */
-
-  .main {
-      grid-area: main;
-      display: grid;
-      grid-template-rows: auto 1fr;
-  }
-
-  .mail-size-section {
-    background-color: lightcyan;
-    padding: 0.5rem;
-  }
-
-  .mail-section {
-    background-color: whitesmoke;
-    padding: 0.7rem;
-  }
-
-  /* Right Panel Section */
-
-  .right-panel {
-    grid-area: right-panel;
-    background-color: lightgoldenrodyellow;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr auto;
-  }
-
-  /* Right-side Widgets Section */
-
-  .widgets {
-    background-color: rgb(241, 224, 202);
-    padding: 0.5rem;
-  }
-
-  .menu-icon {
-      border: none;
-      margin: 5px;
-      margin-right: 20px;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      display: inline;
-      cursor: pointer;
-  }
-
-  input[type=text] {
+input[type=text] {
     margin-left: 5px;
     padding: 5px;
     font-size: 14px;
     border: 1px solid grey;
     width: 50%;
     background: #f1f1f1;
-  }
+}
+
+  /* Left Panel Section */
+
+.left-panel {
+    grid-area: left-panel;
+    display: grid;
+    /* gap: 0.5rem; */
+}
+.inbox-section {
+  background-color: rgb(238, 135, 135);
+  padding: 0.5rem;
+}
+
+.meetings-section {
+  background-color: rgb(160, 179, 238);
+  padding: 0.5rem;
+}
+
+  /* Main Section */
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.mail-size-section {
+  background-color: lightcyan;
+  padding: 0.5rem;
+}
+
+.mail-section {
+  background-color: whitesmoke;
+  padding: 0.7rem;
+}
+
+  /* Right Panel Section */
+
+.right-panel {
+  grid-area: right-panel;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr auto;
+}
+
+.settings {
+  background-color: lightgoldenrodyellow;
+  padding: 0.5rem;
+}
+
+.widgets {
+  background-color: rgb(241, 224, 202);
+  padding: 0.5rem;
+}
