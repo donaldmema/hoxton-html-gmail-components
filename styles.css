@@ -1,56 +1,120 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .container {
-    height: 100vh;
-    display: grid;
-    grid-template: 
-    'header header header' auto
-    'left-panel main right-panel' 1fr/
+  height: 100vh;
+  display: grid;
+  grid-template:
+    "header header header" auto
+    "left-panel main right-panel" 1fr/
     1.5fr 4fr 2fr;
 }
 /* TODO: add media query to not allow expanding of side panels or make them fixed */
 
-
-  /* Header Section */
+/* Header Section */
 
 .header {
-    display: inline;
-    align-content: center;
-    grid-area: header;
-    background-color: white;
-    padding: 1rem;
-}
-  
-.menu-icon {
-    border: none;
-    margin: 5px;
-    margin-right: 20px;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline;
-    cursor: pointer;
+  align-content: center;
+  grid-area: header;
+  background-color: white;
+  padding: 0.3rem 0.5rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.8rem;
 }
 
-input[type=text] {
-    margin-left: 5px;
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid grey;
-    width: 50%;
-    background: #f1f1f1;
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
 }
 
-  /* Left Panel Section */
+.header button span {
+  font-size: 1.4rem;
+  padding: 5px;
+}
+
+.header button:hover {
+  background-color: hsla(0, 0%, 91%, 0.938);
+}
+
+.header__left-section {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__search-section {
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  grid-template-columns: auto 1fr auto;
+}
+
+.search-side {
+  display: grid;
+  place-items: center;
+  background-color: whitesmoke;
+  padding: 0.5rem;
+}
+
+.header__search-section__search-icon {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.header__search-section__expand {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.header__search-section input {
+  border: none;
+  background-color: whitesmoke;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+}
+
+.header__right-section {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  gap: 0.2rem;
+}
+
+.header__right-section__profile-button {
+  border: 1px solid rgb(185, 180, 180);
+  border-radius: 8px;
+  padding: 0.1rem 0.1rem;
+}
+
+.header__right-section__profile-button .profile-container {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.profile-container img {
+  border-radius: 50%;
+}
+
+.header__right-section__profile-button .profile-container span {
+  font-size: 1rem;
+}
+
+/* Left Panel Section */
 
 .left-panel {
-    grid-area: left-panel;
-    display: grid;
-    /* gap: 0.5rem; */
+  grid-area: left-panel;
+  display: grid;
+  /* gap: 0.5rem; */
 }
 .inbox-section {
   background-color: rgb(238, 135, 135);
@@ -62,12 +126,12 @@ input[type=text] {
   padding: 0.5rem;
 }
 
-  /* Main Section */
+/* Main Section */
 
 .main {
-    grid-area: main;
-    display: grid;
-    grid-template-rows: auto 1fr;
+  grid-area: main;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .mail-size-section {
@@ -80,7 +144,7 @@ input[type=text] {
   padding: 0.7rem;
 }
 
-  /* Right Panel Section */
+/* Right Panel Section */
 
 .right-panel {
   grid-area: right-panel;

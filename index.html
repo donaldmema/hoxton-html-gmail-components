@@ -1,39 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
     <div class="container">
-        <header class="header">
-            <button class="button menu-icon" data-toggle="collapse"><img style="width:30px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAVFBMVEX///8AAABhYWGlpaX09PR0dHT7+/s6OjqysrJ/f3/j4+OKioq6uroyMjLs7OzMzMxDQ0OcnJzT09PHx8dQUFALCwtYWFg0NDRtbW0tLS08PDwiIiKX/YjdAAABPklEQVR4nO3cW1ICQRBFwRYRhoc8RBF0//tUV2BZ/VE9RuYK7omJ4Kvo1gAAAAAAAAAAAAAAAPiD7W4xut22J3D/MAf7ji9YvT0o/xVv1dODntKFz9XTg57The/V04Pe04Wb6ulBm3ThoXp60CFd2I7V20OO+cDWVtPmaWybadUTCAAAAAAAAACMZTW23rzj7bQe2+nWdWxyrj6VCTnnA1+qtwe9pAsX1dODFulC15ejWKcLd9XTg3bpwmX19KBlurBt79XjA+5df0dol8fRXbr6AAAAAAAAAIChLEfX2Te9vlUfk/zi7XXqCZzHk3T5B+napXp7UP6k5lo9PeiaLpzDzdePe7rwo3p60Ee6cB5n3l2H3p/V20M+84HtMIffmmvH457ftvtpbPu+61IAAAAAAAAAAAAAAAAAgP/oC/mpKqy3bFV3AAAAAElFTkSuQmCC" alt="menu-logo"></button>
-            <img style="width: 120px" src="https://a.storyblok.com/f/120875/3500x799/279845f2c4/gmail-logo.png" alt="Gmail logo">
-            <input type="text" placeholder="Search mail" name="search">
-        </header>
+      <header class="header">
+        <section class="header__left-section">
+          <button>
+            <span class="material-symbols-outlined"> menu </span>
+          </button>
 
-        <aside class="left-panel">
-            <nav class="inbox-section">INBOX</nav>
-            <div class="meetings-section">Google Meet</div>
-        </aside>
+          <img
+            class="gmail-logo"
+            src="images/gmail-logo.png"
+            alt="Gmail logo"
+            width="90"
+          />
+        </section>
 
-        <main class="main">
-            <nav class="mail-size-section">How many emails do you want to see?</nav>
-            <div class="mail-section">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate quod sit tenetur labore, delectus obcaecati quas dolor laborum quo praesentium eius sint velit eaque est suscipit blanditiis, voluptates magni vel.</div>
-        </main>
+        <section class="header__search-section">
+          <div class="header__search-section__search-icon search-side">
+            <span class="material-symbols-outlined"> search </span>
+          </div>
 
-        <aside class="right-panel">
-            <section class="settings">
-                <div class="quick-settings">Quick Settings</div>
-            </section>
-            <section class="widgets">
-                <nav class="rightside-widgets">widg</nav>
-            </section>
-        </aside>
+          <input
+            class="header__search-section__search-bar"
+            type="search"
+            placeholder="Search mail"
+          />
+
+          <div class="header__search-section__expand search-side">
+            <span class="material-symbols-outlined"> expand_more </span>
+          </div>
+        </section>
+
+        <section class="header__right-section">
+          <button>
+            <span class="material-symbols-outlined"> help </span>
+          </button>
+
+          <button>
+            <span class="material-symbols-outlined"> settings </span>
+          </button>
+
+          <button>
+            <span class="material-symbols-outlined"> apps </span>
+          </button>
+
+          <button class="header__right-section__profile-button">
+            <div class="profile-container">
+              <span class="profile-name">Donald</span>
+
+              <img
+                src="images/profile-pic.jpg"
+                alt="profile picture"
+                width="30"
+              />
+            </div>
+          </button>
+        </section>
+      </header>
+
+      <aside class="left-panel">
+        <nav class="inbox-section">INBOX</nav>
+        <div class="meetings-section">Google Meet</div>
+      </aside>
+
+      <main class="main">
+        <nav class="mail-size-section">How many emails do you want to see?</nav>
+
+        <div class="mail-section">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+          quod sit tenetur labore, delectus obcaecati quas dolor laborum quo
+          praesentium eius sint velit eaque est suscipit blanditiis, voluptates
+          magni vel.
+        </div>
+      </main>
+
+      <aside class="right-panel">
+        <section class="settings">
+          <div class="quick-settings">Quick Settings</div>
+        </section>
+
+        <section class="widgets">
+          <nav class="rightside-widgets">widg</nav>
+        </section>
+      </aside>
     </div>
-</body>
+  </body>
 </html>
