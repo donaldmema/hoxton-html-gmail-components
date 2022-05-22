@@ -255,7 +255,6 @@ button {
 .mail-size-section {
   padding: 0.5rem;
   display: grid;
-  border-right: 1px solid #3233352c;
   border-bottom: 1px solid #3233352c;
   grid-auto-flow: column;
   grid-template-columns: auto auto auto auto 1fr auto auto auto;
@@ -316,9 +315,52 @@ input[type="checkbox"] {
 }
 
 .settings {
-  background-color: lightgoldenrodyellow;
   padding: 0.5rem;
   border-top: 1px solid #3233352c;
+  border-left: 1px solid #3233352c;
+}
+
+.quick-settings {
+  display: grid;
+  grid-template-rows: 0.8fr 2fr 1fr 2fr;
+}
+
+.quick-settings__all-settings {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 25px;
+  gap: 15px;
+  border-bottom: 1px solid #3233352c;
+}
+
+.all-settings-button {
+  grid-row-start: 2;
+  grid-column-start: span 2;
+  color: #2e5fe8;
+  margin-bottom: 10px;
+}
+
+.quick-settings__all-settings button {
+  padding: 4px;
+  border: 2px solid #3233352c;
+  border-radius: 3px;
+}
+
+.quick-settings__density-option {
+  display: grid;
+  gap: 10px;
+  border-bottom: 1px solid #3233352c;
+}
+
+.settings__density__menu-items {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 15px auto 40px;
+  align-items: center;
+}
+
+.quick-settings__density-option label {
+  margin-left: 10px;
 }
 
 .widgets {
