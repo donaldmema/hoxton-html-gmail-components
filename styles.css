@@ -10,7 +10,7 @@
   grid-template:
     "header header header" auto
     "left-panel main right-panel" 1fr/
-    1.5fr 4fr 2fr;
+    185px 4fr 235px;
 }
 /* TODO: add media query to not allow expanding of side panels or make them fixed */
 
@@ -23,7 +23,7 @@
   padding: 0.3rem 0.5rem;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 0.9fr auto;
   gap: 1.8rem;
 }
 
@@ -120,7 +120,7 @@ button {
 .left-panel {
   grid-area: left-panel;
   display: grid;
-  /* gap: 0.5rem; */
+  grid-template-rows: 3fr 2fr;
 }
 .inbox-section {
   /* background-color: rgb(238, 135, 135); */
@@ -140,7 +140,7 @@ button {
 .inbox-section__compose-button button {
   padding: 0.5rem;
   font-size: 14px;
-  color: #545a61;
+  color: #323335;
   display: grid;
   grid-auto-flow: column;
   gap: 10px;
@@ -160,11 +160,15 @@ button {
 
 .inbox-section a {
   text-decoration: none;
-  color: #5f6368;
+  color: #323335;
+}
+
+.inbox-section a:hover {
+  color: #d11e18;
 }
 
 .inbox-section span {
-  color: #5f6368;
+  color: #323335;
   padding: 0.5rem;
 }
 
@@ -185,8 +189,57 @@ button {
 /* Google Meetings Section */
 
 .meetings-section {
-  background-color: rgb(160, 179, 238);
+  /* background-color: rgb(160, 179, 238); */
+  border-top: 1px solid #3233352c;
   padding: 0.5rem;
+  display: grid;
+  align-items: start;
+  grid-template-rows: 20px auto auto 30px auto 2.2rem;
+}
+
+.meetings-section__options {
+  display: grid;
+  grid-template-rows: auto auto;
+  align-items: start center;
+}
+
+.meetings-section__options-menu {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.meetings-section__options-menu a {
+  text-decoration: none;
+  color: #323335;
+}
+
+.chat-section__profiles .profile-container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+  padding: 5px;
+  align-items: center;
+}
+
+.meetings-section__bottom-menu {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.meetings-section__options-menu:hover {
+  border-radius: 40px;
+  background-color: #fce8e6;
+}
+
+.meetings-section button:hover {
+  background-color: #fce8e6;
+}
+
+.meetings-section span {
+  color: #323335;
 }
 
 /* Main Section */
