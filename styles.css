@@ -253,13 +253,33 @@ button {
 }
 
 .mail-size-section {
-  background-color: lightcyan;
   padding: 0.5rem;
+  display: grid;
+  border-right: 1px solid #3233352c;
+  border-bottom: 1px solid #3233352c;
+  grid-auto-flow: column;
+  grid-template-columns: auto auto auto auto 1fr auto auto auto;
+  gap: 5px;
+  align-items: center;
+}
+
+.mail-size-section span {
+  color: #323335;
+  font-size: 18px;
+}
+
+.mail-size-section button:hover {
+  background-color: #fce8e6;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.3);
 }
 
 .mail-section {
   background-color: whitesmoke;
   padding: 0.7rem;
+  overflow: scroll;
 }
 
 /* Right Panel Section */
