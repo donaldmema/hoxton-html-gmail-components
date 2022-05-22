@@ -277,11 +277,10 @@ input[type="checkbox"] {
 }
 
 .mail-section {
-  background-color: whitesmoke;
-  padding: 0.7rem;
-  overflow: scroll;
+  padding-left: 0.5rem;
+  overflow: auto;
   display: grid;
-  grid-template-rows: repeat(auto-fill,30px);
+  grid-template-rows: repeat(auto-fill, 30px);
   align-items: start;
 }
 
@@ -289,8 +288,22 @@ input[type="checkbox"] {
   border-bottom: 1px solid #3233352c;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 30px 30px 120px auto 60px;
+  grid-template-columns: 30px 30px 120px auto 80px;
   align-items: center;
+}
+
+.sender,
+.email-subject {
+  overflow: hidden;
+}
+
+.mail-section a {
+  text-decoration: none;
+  color: #323335;
+}
+
+.mail-section a:hover {
+  background-color: hsla(0, 0%, 91%, 0.938);
 }
 
 /* Right Panel Section */
