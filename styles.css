@@ -121,6 +121,7 @@ button {
   grid-area: left-panel;
   display: grid;
   grid-template-rows: 3fr 2fr;
+  border-top: 1px solid #3233352c;
 }
 .inbox-section {
   /* background-color: rgb(238, 135, 135); */
@@ -246,6 +247,7 @@ button {
 
 .main {
   grid-area: main;
+  border-top: 1px solid #3233352c;
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -272,9 +274,26 @@ button {
 .settings {
   background-color: lightgoldenrodyellow;
   padding: 0.5rem;
+  border-top: 1px solid #3233352c;
 }
 
 .widgets {
-  background-color: rgb(241, 224, 202);
+  border-top: 1px solid #3233352c;
+  border-left: 1px solid #3233352c;
   padding: 0.5rem;
+}
+
+.rightside-widgets {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  padding: 5px;
+}
+
+.rightside-widgets span {
+  color: #323335;
+}
+
+.rightside-widgets button:hover {
+  background-color: #fce8e6;
 }
