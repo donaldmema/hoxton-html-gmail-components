@@ -44,12 +44,16 @@ button {
   background-color: hsla(0, 0%, 91%, 0.938);
 }
 
+/* Header Left Section */
+
 .header__left-section {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
   gap: 0.5rem;
 }
+
+/* Header Search Section */
 
 .header__search-section {
   display: grid;
@@ -81,6 +85,8 @@ button {
   padding: 0.5rem 0.5rem;
   font-size: 1rem;
 }
+
+/* Header Right Section */
 
 .header__right-section {
   display: grid;
@@ -118,8 +124,24 @@ button {
 }
 .inbox-section {
   background-color: rgb(238, 135, 135);
-  padding: 0.5rem;
+  display: grid;
+  padding: 1rem;
+  gap: 0.5rem;
+  place-content: start;
 }
+
+.inbox-section__item {
+  /* border: solid 1px black; */
+  /* border-radius: 2px; */
+  padding: 5px;
+
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 5px;
+  align-items: center;
+}
+
+/* Google Meetings Section */
 
 .meetings-section {
   background-color: rgb(160, 179, 238);
